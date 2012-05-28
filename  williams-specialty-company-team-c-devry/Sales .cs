@@ -1,4 +1,15 @@
-﻿using System;
+﻿/*****************************************************************************
+ * Program: WSC Business Automation
+ * File: Sales.cs
+ * By: Team C    
+ * 
+ * 
+ * 
+ * 
+ */
+
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

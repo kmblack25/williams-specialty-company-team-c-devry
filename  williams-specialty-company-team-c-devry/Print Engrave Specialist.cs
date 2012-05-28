@@ -1,4 +1,15 @@
-﻿using System;
+﻿/*****************************************************************************
+ * Program: WSC Business Automation
+ * File: Print Engrave Specialist.cs
+ * By: Team C    
+ * Professor Margaret Kozak
+ * 
+ * 
+ * 
+ */
+
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,6 +50,11 @@ namespace WSC_Business_Automation_test
         private void button5_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void Print_Engrave_Specialist_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

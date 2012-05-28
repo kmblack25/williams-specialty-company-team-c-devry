@@ -1,4 +1,15 @@
-﻿using System;
+﻿/*****************************************************************************
+ * Program: WSC Business Automation
+ * File: Operations Manager.cs
+ * By: Team C    
+ * 
+ * 
+ * 
+ * 
+ */
+
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,6 +35,11 @@ namespace WSC_Business_Automation_test
         private void button5_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void Operations_Manager_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
