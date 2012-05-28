@@ -45,10 +45,10 @@
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.label3 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -204,17 +204,22 @@
             this.groupBox1.Text = "Stock Availability";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // radioButton1
+            // textBox3
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(7, 33);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(43, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Yes";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.textBox3.Location = new System.Drawing.Point(106, 96);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(102, 20);
+            this.textBox3.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(7, 96);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(93, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Expected Delivery";
+            this.label3.Click += new System.EventHandler(this.label3_Click_1);
             // 
             // radioButton2
             // 
@@ -227,22 +232,17 @@
             this.radioButton2.Text = "No";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // radioButton1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 96);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Expected Delivery";
-            this.label3.Click += new System.EventHandler(this.label3_Click_1);
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(106, 96);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(102, 20);
-            this.textBox3.TabIndex = 3;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(7, 33);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(43, 17);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Yes";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // Print_Engrave_Specialist
             // 
@@ -268,6 +268,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Print_Engrave_Specialist";
             this.Text = "Print_Engrave_Specialist";
+            this.Load += new System.EventHandler(this.Print_Engrave_Specialist_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

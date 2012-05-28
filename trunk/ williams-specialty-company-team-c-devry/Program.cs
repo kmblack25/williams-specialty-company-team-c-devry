@@ -1,4 +1,15 @@
-﻿using System;
+﻿/*****************************************************************************
+ * Program: WSC Business Automation
+ * File: Program.cs
+ * By: Team C    
+ * 
+ * 
+ * 
+ * 
+ */
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;

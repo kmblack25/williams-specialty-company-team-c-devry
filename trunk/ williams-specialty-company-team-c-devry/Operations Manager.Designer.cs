@@ -472,6 +472,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Operations_Manager";
             this.Text = "Operations_Manager";
+            this.Load += new System.EventHandler(this.Operations_Manager_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
