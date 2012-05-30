@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Employee_ID = new System.Windows.Forms.TextBox();
-            this.password = new System.Windows.Forms.TextBox();
+            this.Password = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -55,7 +55,7 @@
             this.label2.Text = "Enter Password";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // Name
+            // Employee_ID
             // 
             this.Employee_ID.Location = new System.Drawing.Point(138, 44);
             this.Employee_ID.Name = "Employee_ID";
@@ -63,13 +63,13 @@
             this.Employee_ID.TabIndex = 2;
             this.Employee_ID.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // password
+            // Password
             // 
-            this.password.Location = new System.Drawing.Point(138, 101);
-            this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(218, 20);
-            this.password.TabIndex = 3;
-            this.password.UseSystemPasswordChar = true;
+            this.Password.Location = new System.Drawing.Point(138, 101);
+            this.Password.Name = "Password";
+            this.Password.Size = new System.Drawing.Size(218, 20);
+            this.Password.TabIndex = 3;
+            this.Password.UseSystemPasswordChar = true;
             // 
             // button1
             // 
@@ -87,7 +87,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(499, 234);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.password);
+            this.Controls.Add(this.Password);
             this.Controls.Add(this.Employee_ID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -104,7 +104,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox Employee_ID ;
-        private System.Windows.Forms.TextBox password;
+        private System.Windows.Forms.TextBox Password;
         private System.Windows.Forms.Button button1;
 
     }
