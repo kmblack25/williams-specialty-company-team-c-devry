@@ -60,7 +60,7 @@ namespace WSC_Business_Automation_test
             * 
             * ***************************************************************************************/
           
-         string UserID = "sales"; //User ID1  is string variable so we can check login--need to remove hardcode login
+         string UserID = "sales"; //User ID  is string variable so we can check login--need to remove hardcode login
          string UserPass = "password"; //UserPass is string varaiable for checking password-- needw to remove hardcoded password
 
         //start temp variables for login check
