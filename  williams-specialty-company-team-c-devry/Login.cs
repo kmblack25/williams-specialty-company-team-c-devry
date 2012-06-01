@@ -60,47 +60,15 @@ namespace WSC_Business_Automation_test
             * 
             * ***************************************************************************************/
           
-         string UserID = "sales"; //User ID  is string variable so we can check login--need to remove hardcode login
-         string UserPass = "password"; //UserPass is string varaiable for checking password-- needw to remove hardcoded password
+         string UserID = ""; //User ID  is string variable so we can check login--need to remove hardcode login
+         string UserPass = ""; //UserPass is string varaiable for checking password-- needw to remove hardcoded password
 
-        //start temp variables for login check
-            string USERID1 = "ops";
-            string USERID2 = "print";
-            //End temp variables for login check--remove when no longer needed 
+        
 
          string Input_Login = Employee_ID.Text;  //variable to parse text entered into Login textbox
          string Input_Password = Password.Text; //variable to parse text entered into Password textbox
 
-         //if-else stsements tp launch differnt interfaces
-         if (UserID == Input_Login && UserPass == Input_Password)  // need to add department check
-         {
-             Sales frm = new Sales();
-             frm.ShowDialog();
-         } else
-             if (USERID1 == Input_Login && UserPass == Input_Password) // need to add department check
-             {
-                 Operations_Manager frm = new Operations_Manager();
-                 frm.ShowDialog();
-             }
-             else
-                 if (USERID2 == Input_Login && UserPass == Input_Password) // need to add department check
-                 {
-                     Print_Engrave_Specialist frm = new Print_Engrave_Specialist();
-                     frm.ShowDialog();
-                 }
-                 else 
-
-                     //if login or password is incorrect then messabox show error. When click button. clear textboxs for
-                     //newe login attempt
-                     if (UserID != Input_Login || UserPass != Input_Password)  // needs to fleshed out do to needing deptparment check
-                     {
-                          MessageBox.Show("incorrect login or password. Please Try again", "Input Error" );
-                          Employee_ID.Clear();
-                          Password.Clear();
-                          return;
-                     }
-
-        }
+         
         
         private void Login_Load(object sender, EventArgs e)
         {
