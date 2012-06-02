@@ -63,13 +63,21 @@ namespace WSC_Business_Automation_test
             
 
             
+            
+            //Select string for database//
             string Input_Login = Employee_ID.Text;  //variable to parse text entered into Login textbox
             string Input_Password = Password.Text; //variable to parse text entered into Password textbox
             
-            //Select string for database//
-            string selectstring = "SELECT User_ID, Emp_Password, Employee_Type FROM Employee";  
-            OleDbConnection myconc = new OleDbConnection(connectionstring);
 
+	            OleDbConnection myconc = new OleDbConnection(connectionstring);
+
+
+	          myconc.Open(); //open connection I am not sure where to put this.
+
+            //Select string for database//
+            string selectstring = "SELECT User_ID, Emp_Password, Employee_Type FROM Employee WHERE user_Id='"Input_login"' and emp_password='"Input_Password"'";
+  
+            
             
             OleDbCommand cmd = new OleDbCommand(selectstring, myconc); //new database command to send my string
             OleDbDataAdapter adapter = new OleDbDataAdapter(cmd); //new adapter for data
@@ -78,23 +86,18 @@ namespace WSC_Business_Automation_test
                        
             adapter.Fill(ds); //fill the data set
             
-            myconc.Close(); //clsoe connection
+            
 
             //below see not working. i can login with anything
-           if (ds.Tables[0].Rows.Count > 0)
-                if (ds.Tables[0].Rows[0]["User_ID"].ToString() == Input_Login && ds.Tables[0].Rows[0]["Emp_Password"].ToString() == Input_Password && ds.Tables[0].Rows[0]["Employee_Type"].ToString() == "sales")
-                
-                    ds.Equals(true); 
-            
-            { 
-            Sales frm = new Sales();
-                        frm.ShowDialog();
-
-
-                    }
-
-                }
-
+           if (cmd !=null)
+                {
+             MessageBox.Show("login was successful");}              
+        
+	   else     {
+	        MessageBox.Show("Login was unsuccessful, Please try again");
+           }
+	   myconc.Close(); //clsoe connection
+        
         private void Login_Load(object sender, EventArgs e)
         {
 
