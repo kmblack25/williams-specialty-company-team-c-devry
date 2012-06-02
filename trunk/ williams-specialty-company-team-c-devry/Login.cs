@@ -75,7 +75,9 @@ namespace WSC_Business_Automation_test
 	          myconc.Open(); //open connection I am not sure where to put this.
 
             //Select string for database//
-            string selectstring = "SELECT User_ID, Emp_Password, Employee_Type FROM Employee WHERE user_Id='"Input_login"' AND  emp_password='"Input_Password"'";
+
+            string selectstring = "SELECT User_ID, Emp_Password, Employee_Type FROM Employee WHERE user_Id ='" + Employee_ID.Text + "' and stPassword='" + Password.Text + "'";
+
   
             
             
