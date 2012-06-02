@@ -49,7 +49,7 @@ namespace WSC_Business_Automation_test
 
 
             //connection string expamle for database--
-            //string ConnStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\abc.mdb;Jet OLEDB:Database Password=password";
+            string connectionstring = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\WSCDB_V3.accdbb;Jet OLEDB:Database Password=password";
 
 
             /***************************************************************************************
@@ -61,33 +61,48 @@ namespace WSC_Business_Automation_test
             * 
             * ***************************************************************************************/
 
-            //string UserID = ""; //User ID  is string variable so we can check login--need to remove hardcode login
-                       
-            // string UserPass = ""; //UserPass is string varaiable for checking password-- needw to remove hardcoded password
-
+            
 
             //get connection string from app.config
-          //string conectionstring =System.Configuration.ConfigurationSettings.AppSettings.ToString();
-            string conncetionstring = System.Configuration.ConfigurationSettings.AppSettings.ToString();
+
+            //string connectionstring = System.Configuration.ConfigurationSettings.AppSettings.ToString();
 
 
             string Input_Login = Employee_ID.Text;  //variable to parse text entered into Login textbox
             string Input_Password = Password.Text; //variable to parse text entered into Password textbox
-
-            if( == Input_Login &&  == Input_Password)  // need to add department check
-         {
-             Sales frm = new Sales();
-             frm.ShowDialog();
             
+            //string for database//
+            string selectstring = "SELECT User_ID, Employee_ID, Employee_Type FROM Employee";  
+            OleDbConnection myconc = new OleDbConnection(connectionstring);
+                      
             
-            } 
+            OleDbCommand cmd = new OleDbCommand(selectstring, myconc); //new database command
+           OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
+            DataSet ds = new DataSet(); // newdataset
+            
+            adapter.Fill(ds); //fill the data set
+            
+            myconc.Close();
+            if (ds.Tables[0].Rows.Count < 0)
+                if (ds.Tables[0].Rows[0]["User_ID"].ToString() == Input_Login && ds.Tables[0].Rows[0]["Emp_Password"].ToString() == Input_Password)
+               
+                               
+                    {
+                        Sales frm = new Sales();
+                        frm.ShowDialog();
 
-        }
-        
+
+                    }
+
+                }
+
         private void Login_Load(object sender, EventArgs e)
         {
 
         }
+        }
+        
+        
     }
-    }
+    
 
