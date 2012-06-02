@@ -49,7 +49,7 @@ namespace WSC_Business_Automation_test
 
 
             //connection string expamle for database--
-            string connectionstring = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\WSCDB_V3.accdbb;Jet OLEDB:Database Password=password";
+            string connectionstring = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\WSCDB_V3.accdb;Persist Security Info=True;Jet OLEDB:Database Password=password";
 
 
             /***************************************************************************************
@@ -72,7 +72,7 @@ namespace WSC_Business_Automation_test
             string Input_Password = Password.Text; //variable to parse text entered into Password textbox
             
             //string for database//
-            string selectstring = "SELECT User_ID, Employee_ID, Employee_Type FROM Employee";  
+            string selectstring = "SELECT User_ID, Employee_ID, Emp_Password, Employee_Type FROM Employee";  
             OleDbConnection myconc = new OleDbConnection(connectionstring);
                       
             
