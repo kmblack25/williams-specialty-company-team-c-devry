@@ -96,7 +96,7 @@ namespace WSC_Business_Automation_test
 	   else     {
 	        MessageBox.Show("Login was unsuccessful, Please try again");
            }
-	   myconc.Close(); //clsoe connection
+	   myconc.Close(); }//clsoe connection
         
         private void Login_Load(object sender, EventArgs e)
         {
