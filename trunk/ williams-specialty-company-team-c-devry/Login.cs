@@ -51,7 +51,6 @@ namespace WSC_Business_Automation_test
             //connection string expamle for database--
             string connectionstring = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\WSCDB_V3.accdb;Persist Security Info=True;Jet OLEDB:Database Password=password";
 
-
             /***************************************************************************************
             * Lanuch code for checking login and password.
             * 
@@ -70,21 +69,23 @@ namespace WSC_Business_Automation_test
             //Select string for database//
             string selectstring = "SELECT User_ID, Emp_Password, Employee_Type FROM Employee";  
             OleDbConnection myconc = new OleDbConnection(connectionstring);
-                      
+
             
-            OleDbCommand cmd = new OleDbCommand(selectstring, myconc); //new database command
-            OleDbDataAdapter adapter = new OleDbDataAdapter(cmd); //new adapter for 
+            OleDbCommand cmd = new OleDbCommand(selectstring, myconc); //new database command to send my string
+            OleDbDataAdapter adapter = new OleDbDataAdapter(cmd); //new adapter for data
            
             DataSet ds = new DataSet(); // newdataset
                        
             adapter.Fill(ds); //fill the data set
             
-            myconc.Close();
+            myconc.Close(); //clsoe connection
 
-            if (ds.Tables[0].Rows.Count > 0)
+            //below see not working. i can login with anything
+           if (ds.Tables[0].Rows.Count > 0)
                 if (ds.Tables[0].Rows[0]["User_ID"].ToString() == Input_Login && ds.Tables[0].Rows[0]["Emp_Password"].ToString() == Input_Password && ds.Tables[0].Rows[0]["Employee_Type"].ToString() == "sales")
                 
-                    e.Equals(true); 
+                    ds.Equals(true); 
+            
             { 
             Sales frm = new Sales();
                         frm.ShowDialog();
