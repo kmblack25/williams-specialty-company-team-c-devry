@@ -68,7 +68,7 @@ namespace WSC_Business_Automation_test
             string Input_Password = Password.Text; //variable to parse text entered into Password textbox
             
             //Select string for database//
-            string selectstring = "SELECT User_ID, Employee_ID, Emp_Password, Employee_Type FROM Employee";  
+            string selectstring = "SELECT User_ID, Emp_Password, Employee_Type FROM Employee";  
             OleDbConnection myconc = new OleDbConnection(connectionstring);
                       
             
@@ -80,7 +80,8 @@ namespace WSC_Business_Automation_test
             adapter.Fill(ds); //fill the data set
             
             myconc.Close();
-            if (ds.Tables[0].Rows.Count > 0)
+            
+            if (ds.Tables[0].Rows.Count != 0)
                 if (ds.Tables[0].Rows[0]["User_ID"].ToString() == Input_Login && ds.Tables[0].Rows[0]["Emp_Password"].ToString() == Input_Password)
                
                                
