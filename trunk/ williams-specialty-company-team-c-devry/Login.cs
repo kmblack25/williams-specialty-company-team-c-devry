@@ -81,7 +81,7 @@ namespace WSC_Business_Automation_test
             
             myconc.Close();
             if (ds.Tables[0].Rows.Count > 0)
-                if (ds.Tables[0].Rows[0]["User_ID"].ToString() == Input_Login && ds.Tables[0].Rows[0]["Emp_Password"].ToString() == Input_Password && ds.Tables[0].Rows[0]["Employee_Type"].ToString() == "sales")
+                if (ds.Tables[0].Rows[0]["User_ID"].ToString() == Input_Login && ds.Tables[0].Rows[0]["Emp_Password"].ToString() == Input_Password)
                
                                
                     {
