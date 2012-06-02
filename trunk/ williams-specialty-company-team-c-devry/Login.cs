@@ -63,23 +63,20 @@ namespace WSC_Business_Automation_test
 
             
 
-            //get connection string from app.config
-
-            //string connectionstring = System.Configuration.ConfigurationSettings.AppSettings.ToString();
-
-
+            
             string Input_Login = Employee_ID.Text;  //variable to parse text entered into Login textbox
             string Input_Password = Password.Text; //variable to parse text entered into Password textbox
             
-            //string for database//
+            //Select string for database//
             string selectstring = "SELECT User_ID, Employee_ID, Emp_Password, Employee_Type FROM Employee";  
             OleDbConnection myconc = new OleDbConnection(connectionstring);
                       
             
             OleDbCommand cmd = new OleDbCommand(selectstring, myconc); //new database command
-           OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
+            OleDbDataAdapter adapter = new OleDbDataAdapter(cmd); //new adapter for 
+           
             DataSet ds = new DataSet(); // newdataset
-            
+                       
             adapter.Fill(ds); //fill the data set
             
             myconc.Close();
