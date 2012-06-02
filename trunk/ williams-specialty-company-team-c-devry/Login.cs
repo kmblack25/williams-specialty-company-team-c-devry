@@ -55,11 +55,7 @@ namespace WSC_Business_Automation_test
             /***************************************************************************************
             * Lanuch code for checking login and password.
             * 
-            * NOTE:Needs to have database call to accces the database and change code to reflect
-            * the use of a database. I have hardcoded some values to facliate a login, check procedure
-            * going to have to remove them sometime after everything else works
-            * 
-            * ***************************************************************************************/
+            *****************************************************/
 
             
 
