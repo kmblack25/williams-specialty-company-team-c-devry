@@ -49,8 +49,8 @@ namespace WSC_Business_Automation_test
 
             //connection string expamle for database--
             //string ConnStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\abc.mdb;Jet OLEDB:Database Password=password";
-            
-            
+
+
             /***************************************************************************************
             * Lanuch code for checking login and password.
             * 
@@ -59,21 +59,21 @@ namespace WSC_Business_Automation_test
             * going to have to remove them sometime after everything else works
             * 
             * ***************************************************************************************/
-          
-         string UserID = ""; //User ID  is string variable so we can check login--need to remove hardcode login
-         string UserPass = ""; //UserPass is string varaiable for checking password-- needw to remove hardcoded password
 
-        
+            //string UserID = ""; //User ID  is string variable so we can check login--need to remove hardcode login
+           // string UserPass = ""; //UserPass is string varaiable for checking password-- needw to remove hardcoded password
 
-         string Input_Login = Employee_ID.Text;  //variable to parse text entered into Login textbox
-         string Input_Password = Password.Text; //variable to parse text entered into Password textbox
 
-         
+
+            string Input_Login = Employee_ID.Text;  //variable to parse text entered into Login textbox
+            string Input_Password = Password.Text; //variable to parse text entered into Password textbox
+
+        }
         
         private void Login_Load(object sender, EventArgs e)
         {
 
         }
-        
     }
-}
+    }
+
