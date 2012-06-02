@@ -17,6 +17,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Configuration;
 using System.Data.OleDb; //needed for access
 
 namespace WSC_Business_Automation_test
@@ -61,12 +62,25 @@ namespace WSC_Business_Automation_test
             * ***************************************************************************************/
 
             //string UserID = ""; //User ID  is string variable so we can check login--need to remove hardcode login
-           // string UserPass = ""; //UserPass is string varaiable for checking password-- needw to remove hardcoded password
+                       
+            // string UserPass = ""; //UserPass is string varaiable for checking password-- needw to remove hardcoded password
 
+
+            //get connection string from app.config
+          //string conectionstring =System.Configuration.ConfigurationSettings.AppSettings.ToString();
+            string conncetionstring = System.Configuration.ConfigurationSettings.AppSettings.ToString();
 
 
             string Input_Login = Employee_ID.Text;  //variable to parse text entered into Login textbox
             string Input_Password = Password.Text; //variable to parse text entered into Password textbox
+
+            if( == Input_Login &&  == Input_Password)  // need to add department check
+         {
+             Sales frm = new Sales();
+             frm.ShowDialog();
+            
+            
+            } 
 
         }
         
