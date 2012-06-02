@@ -3,7 +3,7 @@
  * File: Login.cs
  * By: Team C    
  * 
- * Loign.cs captures login/paasword and checks against database if correct launches
+ * Loign.cs captures login/password and checks against database if correct launches
  * correct interface else throws error
  * 
  */
