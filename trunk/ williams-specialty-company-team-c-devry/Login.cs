@@ -64,7 +64,7 @@ namespace WSC_Business_Automation_test
 
             
             
-            //Select string for database//
+            
             string Input_Login = Employee_ID.Text;  //variable to parse text entered into Login textbox
             string Input_Password = Password.Text; //variable to parse text entered into Password textbox
             
