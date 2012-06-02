@@ -83,7 +83,7 @@ namespace WSC_Business_Automation_test
             adapter.Fill(ds); //fill the data set
             
             myconc.Close();
-            if (ds.Tables[0].Rows.Count < 0)
+            if (ds.Tables[0].Rows.Count > 0)
                 if (ds.Tables[0].Rows[0]["User_ID"].ToString() == Input_Login && ds.Tables[0].Rows[0]["Emp_Password"].ToString() == Input_Password)
                
                                
