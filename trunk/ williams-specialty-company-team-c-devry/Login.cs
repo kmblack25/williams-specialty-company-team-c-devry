@@ -91,7 +91,7 @@ namespace WSC_Business_Automation_test
             
 
             //below see not working. i can login with anything
-            if (Input_Login != null && Input_Password != null && Employee_Type =="sales")
+            if (Input_Login != null && Input_Password != null )
                 {
              MessageBox.Show("login was successful");}              
         
