@@ -86,12 +86,12 @@ namespace WSC_Business_Automation_test
            
             DataSet ds = new DataSet(); // newdataset
                        
-            adapter.Fill(ds); //fill the data set
+            //adapter.Fill(ds); //fill the data set
             
             
 
             //below see not working. i can login with anything
-           if (cmd !=null)
+            if (Input_Login != null && Input_Password != null && Employee_Type =="sales")
                 {
              MessageBox.Show("login was successful");}              
         
