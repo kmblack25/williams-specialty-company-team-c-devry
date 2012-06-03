@@ -54,12 +54,12 @@ namespace WSC_Business_Automation_test
             string connectionstring = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\WSCDB_V3.accdb;Persist Security Info=True;Jet OLEDB:Database Password=password";
            
             OleDbConnection myconc = new OleDbConnection(connectionstring);//connection string for order number
-            string selectstring = "Select Order_Number FROM [Order] where Order_Number ='" + txtOrdNum.Text + "'"; //select string to see if there is a order number 
+            string selectstring = "Select Order_Number FROM [Order]";  
             myconc.Open(); //open connection I am not sure where to put this.
             OleDbCommand cmd = new OleDbCommand(selectstring, myconc); //new database command to send my string
             OleDbDataReader myReader; 
             myReader = cmd.ExecuteReader(); //execute reader
-            int order = Convert.ToInt32(txtOrdNum.Text);
+            
 
             //if (order == Order_number) ;
             while (myReader.Read() == true)
@@ -67,7 +67,7 @@ namespace WSC_Business_Automation_test
                
 
                 record = (int)myReader[0];
-                txtOrdNum.Text = (string)myReader[1];
+                txtOrdNum.Text = (string) myReader[1];
                 txtOrdDate.Text = (string) myReader[2];
                 txtFirstName.Text = (string) myReader[3];
                 txtStreet.Text = (string) myReader[4];
@@ -99,6 +99,11 @@ namespace WSC_Business_Automation_test
         {
             //connection string expamle for database--
             string connectionstring = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\WSCDB_V3.accdb;Persist Security Info=True;Jet OLEDB:Database Password=password";
+        }
+
+        private void txtOrdNum_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
