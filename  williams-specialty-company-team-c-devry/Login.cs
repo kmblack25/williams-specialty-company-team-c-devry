@@ -65,7 +65,7 @@ namespace WSC_Business_Automation_test
             
             
             
-            string Input_Login = Employee_ID.Text;  //variable to parse text entered into Login textbox
+            string Input_Login = Employee_login.Text;  //variable to parse text entered into Login textbox
             string Input_Password = Password.Text; //variable to parse text entered into Password textbox
             
 
@@ -76,7 +76,7 @@ namespace WSC_Business_Automation_test
 
             //Select string for database//
 
-            string selectstring = "SELECT User_ID, Emp_Password, Employee_Type FROM Employee WHERE user_Id ='" + Employee_ID.Text + "' and stPassword='" + Password.Text + "'";
+            string selectstring = "SELECT User_ID, Emp_Password, Employee_Type, Employee_ID FROM Employee WHERE user_Id ='" + Employee_login.Text + "' and stPassword='" + Password.Text + "'";
 
   
             
@@ -90,7 +90,7 @@ namespace WSC_Business_Automation_test
             
             
 
-            //below see not working. i can login with anything
+           /* //below see not working. i can login with anything
             if (Input_Login != null && Input_Password != null)
             {
                 Sales frm = new Sales();
@@ -100,16 +100,30 @@ namespace WSC_Business_Automation_test
 
             else
             {
-                MessageBox.Show("Login was unsuccessful, Please try again");
-            }
-	   myconc.Close(); }//clsoe connection
+                MessageBox.Show("Login was unsuccessful, Please try again");*/
+
+            if (Employee_ID != 0)
+                //if (ds.Tables[0].Rows[0]["User_ID"].ToString() == Input_Login && ds.Tables[0].Rows[0]["Emp_Password"].ToString() == Input_Password)
+               
+                               
+                    {
+                        Sales frm = new Sales();
+                        frm.ShowDialog();
+
+
+                    }
+            myconc.Close(); }//clsoe connection
+
+              
+           
+	   
         
         private void Login_Load(object sender, EventArgs e)
         {
 
         }
-        }
         
+
         
     }
     

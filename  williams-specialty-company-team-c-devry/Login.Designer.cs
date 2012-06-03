@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.Employee_ID = new System.Windows.Forms.TextBox();
+            this.Employee_login = new System.Windows.Forms.TextBox();
             this.Password = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -40,9 +40,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(28, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 13);
+            this.label1.Size = new System.Drawing.Size(110, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Enter Employee ID";
+            this.label1.Text = "Enter Employee Login";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
@@ -55,13 +55,13 @@
             this.label2.Text = "Enter Password";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // Employee_ID
+            // Employee_login
             // 
-            this.Employee_ID.Location = new System.Drawing.Point(138, 44);
-            this.Employee_ID.Name = "Employee_ID";
-            this.Employee_ID.Size = new System.Drawing.Size(218, 20);
-            this.Employee_ID.TabIndex = 2;
-            this.Employee_ID.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.Employee_login.Location = new System.Drawing.Point(138, 44);
+            this.Employee_login.Name = "Employee_login";
+            this.Employee_login.Size = new System.Drawing.Size(218, 20);
+            this.Employee_login.TabIndex = 2;
+            this.Employee_login.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Password
             // 
@@ -88,7 +88,7 @@
             this.ClientSize = new System.Drawing.Size(499, 234);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Password);
-            this.Controls.Add(this.Employee_ID);
+            this.Controls.Add(this.Employee_login);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Login";
@@ -103,7 +103,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox Employee_ID ;
+        private System.Windows.Forms.TextBox Employee_login ;
         private System.Windows.Forms.TextBox Password;
         private System.Windows.Forms.Button button1;
 
