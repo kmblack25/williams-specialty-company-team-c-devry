@@ -90,5 +90,10 @@ namespace WSC_Business_Automation_test
             //connection string expamle for database--
             string connectionstring = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\WSCDB_V3.accdb;Persist Security Info=True;Jet OLEDB:Database Password=password";
         }
+
+        private void txtZip_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
