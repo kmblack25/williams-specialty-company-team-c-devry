@@ -47,9 +47,28 @@ namespace WSC_Business_Automation_test
         private void button2_Click(object sender, EventArgs e) //search button
         {
 
-        } //connection string expamle for database--
+            int status = 0;
+            int record;
+          //connection string expamle for database--
         string connectionstring = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\WSCDB_V3.accdb;Persist Security Info=True;Jet OLEDB:Database Password=password";
+         
+            OleDbConnection myconc = new OleDbConnection(connectionstring);//connection string for order number
+          string selectstring = "Select Order_Number FROM Order"; //slect string to see if there is a order number 
+            myconc.Open(); //open connection I am not sure where to put this.
+            OleDbCommand cmd = new OleDbCommand(selectstring, myconc); //new database command to send my string
+            OleDbDataReader myReader = new OleDbDataReader(); //create new data reader
+            myReader = cmd.ExecuteReader(); //execute reader
 
+            while (myReader.Read() == true)
+            {
+                record = (int)myReader[0];
+                txtOrdDate.Text.ToString();
+                txtFirstName.Text.ToString();
+            }
+            
+        } 
+        
+        
         private void button3_Click(object sender, EventArgs e) //update button
         {
             //connection string expamle for database--
