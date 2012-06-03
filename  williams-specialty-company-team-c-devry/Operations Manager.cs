@@ -48,12 +48,12 @@ namespace WSC_Business_Automation_test
         {
 
             int status = 0;
-            int record;
+            int record = 0;
             //connection string expamle for database--
             string connectionstring = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\WSCDB_V3.accdb;Persist Security Info=True;Jet OLEDB:Database Password=password";
 
             OleDbConnection myconc = new OleDbConnection(connectionstring);//connection string for order number
-            string selectstring = "Select Order_Number FROM Order"; //slect string to see if there is a order number 
+            string selectstring = "Select Order_Number FROM"; //select string to see if there is a order number 
             myconc.Open(); //open connection I am not sure where to put this.
             OleDbCommand cmd = new OleDbCommand(selectstring, myconc); //new database command to send my string
             OleDbDataReader myReader; 
