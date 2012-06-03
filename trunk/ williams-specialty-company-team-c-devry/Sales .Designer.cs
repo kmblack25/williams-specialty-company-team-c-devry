@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtOrdNum = new System.Windows.Forms.TextBox();
+            this.txtOrdDate = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
@@ -41,33 +41,33 @@
             this.button5 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtFirstName = new System.Windows.Forms.TextBox();
+            this.txtLastName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtStreet = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtCity = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtState = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtZip = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtAcctNum = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtPayType = new System.Windows.Forms.TextBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.txtProdCont = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txtNote = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.txtJobType = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.txtMediaType = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -80,19 +80,19 @@
             this.label1.Text = "Order Number";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
+            // txtOrdNum
             // 
-            this.textBox1.Location = new System.Drawing.Point(128, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(110, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtOrdNum.Location = new System.Drawing.Point(128, 29);
+            this.txtOrdNum.Name = "txtOrdNum";
+            this.txtOrdNum.Size = new System.Drawing.Size(110, 20);
+            this.txtOrdNum.TabIndex = 1;
             // 
-            // textBox2
+            // txtOrdDate
             // 
-            this.textBox2.Location = new System.Drawing.Point(348, 29);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(110, 20);
-            this.textBox2.TabIndex = 2;
+            this.txtOrdDate.Location = new System.Drawing.Point(348, 29);
+            this.txtOrdDate.Name = "txtOrdDate";
+            this.txtOrdDate.Size = new System.Drawing.Size(110, 20);
+            this.txtOrdDate.TabIndex = 2;
             // 
             // label2
             // 
@@ -191,19 +191,19 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "Last Name";
             // 
-            // textBox3
+            // txtFirstName
             // 
-            this.textBox3.Location = new System.Drawing.Point(128, 82);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(110, 20);
-            this.textBox3.TabIndex = 13;
+            this.txtFirstName.Location = new System.Drawing.Point(128, 82);
+            this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.Size = new System.Drawing.Size(110, 20);
+            this.txtFirstName.TabIndex = 13;
             // 
-            // textBox4
+            // txtLastName
             // 
-            this.textBox4.Location = new System.Drawing.Point(348, 82);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(137, 20);
-            this.textBox4.TabIndex = 14;
+            this.txtLastName.Location = new System.Drawing.Point(348, 82);
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.Size = new System.Drawing.Size(137, 20);
+            this.txtLastName.TabIndex = 14;
             // 
             // label5
             // 
@@ -215,12 +215,12 @@
             this.label5.Text = "Street";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // textBox5
+            // txtStreet
             // 
-            this.textBox5.Location = new System.Drawing.Point(128, 129);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(237, 20);
-            this.textBox5.TabIndex = 16;
+            this.txtStreet.Location = new System.Drawing.Point(128, 129);
+            this.txtStreet.Name = "txtStreet";
+            this.txtStreet.Size = new System.Drawing.Size(237, 20);
+            this.txtStreet.TabIndex = 16;
             // 
             // label6
             // 
@@ -231,12 +231,12 @@
             this.label6.TabIndex = 17;
             this.label6.Text = "City";
             // 
-            // textBox6
+            // txtCity
             // 
-            this.textBox6.Location = new System.Drawing.Point(463, 129);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(110, 20);
-            this.textBox6.TabIndex = 18;
+            this.txtCity.Location = new System.Drawing.Point(463, 129);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Size = new System.Drawing.Size(110, 20);
+            this.txtCity.TabIndex = 18;
             // 
             // label7
             // 
@@ -247,12 +247,12 @@
             this.label7.TabIndex = 19;
             this.label7.Text = "State";
             // 
-            // textBox7
+            // txtState
             // 
-            this.textBox7.Location = new System.Drawing.Point(128, 170);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(94, 20);
-            this.textBox7.TabIndex = 20;
+            this.txtState.Location = new System.Drawing.Point(128, 170);
+            this.txtState.Name = "txtState";
+            this.txtState.Size = new System.Drawing.Size(94, 20);
+            this.txtState.TabIndex = 20;
             // 
             // label8
             // 
@@ -263,12 +263,12 @@
             this.label8.TabIndex = 21;
             this.label8.Text = "Zipcode";
             // 
-            // textBox8
+            // txtZip
             // 
-            this.textBox8.Location = new System.Drawing.Point(314, 170);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(77, 20);
-            this.textBox8.TabIndex = 22;
+            this.txtZip.Location = new System.Drawing.Point(314, 170);
+            this.txtZip.Name = "txtZip";
+            this.txtZip.Size = new System.Drawing.Size(77, 20);
+            this.txtZip.TabIndex = 22;
             // 
             // label9
             // 
@@ -279,12 +279,12 @@
             this.label9.TabIndex = 23;
             this.label9.Text = "Phone Number";
             // 
-            // textBox9
+            // txtPhone
             // 
-            this.textBox9.Location = new System.Drawing.Point(546, 169);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(110, 20);
-            this.textBox9.TabIndex = 24;
+            this.txtPhone.Location = new System.Drawing.Point(546, 169);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(110, 20);
+            this.txtPhone.TabIndex = 24;
             // 
             // label10
             // 
@@ -295,12 +295,12 @@
             this.label10.TabIndex = 25;
             this.label10.Text = "Email";
             // 
-            // textBox10
+            // txtEmail
             // 
-            this.textBox10.Location = new System.Drawing.Point(128, 223);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(156, 20);
-            this.textBox10.TabIndex = 26;
+            this.txtEmail.Location = new System.Drawing.Point(128, 223);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(156, 20);
+            this.txtEmail.TabIndex = 26;
             // 
             // label11
             // 
@@ -312,12 +312,12 @@
             this.label11.Text = "Account Number";
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
-            // textBox11
+            // txtAcctNum
             // 
-            this.textBox11.Location = new System.Drawing.Point(128, 281);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(110, 20);
-            this.textBox11.TabIndex = 28;
+            this.txtAcctNum.Location = new System.Drawing.Point(128, 281);
+            this.txtAcctNum.Name = "txtAcctNum";
+            this.txtAcctNum.Size = new System.Drawing.Size(110, 20);
+            this.txtAcctNum.TabIndex = 28;
             // 
             // label12
             // 
@@ -328,12 +328,12 @@
             this.label12.TabIndex = 29;
             this.label12.Text = "Payment Type";
             // 
-            // textBox12
+            // txtPayType
             // 
-            this.textBox12.Location = new System.Drawing.Point(412, 281);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(110, 20);
-            this.textBox12.TabIndex = 30;
+            this.txtPayType.Location = new System.Drawing.Point(412, 281);
+            this.txtPayType.Name = "txtPayType";
+            this.txtPayType.Size = new System.Drawing.Size(110, 20);
+            this.txtPayType.TabIndex = 30;
             // 
             // checkBox3
             // 
@@ -354,13 +354,13 @@
             this.label13.TabIndex = 32;
             this.label13.Text = "Product Content";
             // 
-            // textBox13
+            // txtProdCont
             // 
-            this.textBox13.Location = new System.Drawing.Point(128, 396);
-            this.textBox13.Multiline = true;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(394, 35);
-            this.textBox13.TabIndex = 33;
+            this.txtProdCont.Location = new System.Drawing.Point(128, 396);
+            this.txtProdCont.Multiline = true;
+            this.txtProdCont.Name = "txtProdCont";
+            this.txtProdCont.Size = new System.Drawing.Size(394, 35);
+            this.txtProdCont.TabIndex = 33;
             // 
             // label14
             // 
@@ -372,13 +372,13 @@
             this.label14.Text = "Notes";
             this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
-            // textBox14
+            // txtNote
             // 
-            this.textBox14.Location = new System.Drawing.Point(128, 468);
-            this.textBox14.Multiline = true;
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(622, 62);
-            this.textBox14.TabIndex = 35;
+            this.txtNote.Location = new System.Drawing.Point(128, 468);
+            this.txtNote.Multiline = true;
+            this.txtNote.Name = "txtNote";
+            this.txtNote.Size = new System.Drawing.Size(622, 62);
+            this.txtNote.TabIndex = 35;
             // 
             // label15
             // 
@@ -389,12 +389,12 @@
             this.label15.TabIndex = 36;
             this.label15.Text = "Job Type";
             // 
-            // textBox15
+            // txtJobType
             // 
-            this.textBox15.Location = new System.Drawing.Point(128, 330);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(110, 20);
-            this.textBox15.TabIndex = 37;
+            this.txtJobType.Location = new System.Drawing.Point(128, 330);
+            this.txtJobType.Name = "txtJobType";
+            this.txtJobType.Size = new System.Drawing.Size(110, 20);
+            this.txtJobType.TabIndex = 37;
             // 
             // label16
             // 
@@ -405,45 +405,45 @@
             this.label16.TabIndex = 38;
             this.label16.Text = "Media Type";
             // 
-            // textBox16
+            // txtMediaType
             // 
-            this.textBox16.Location = new System.Drawing.Point(412, 330);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(110, 20);
-            this.textBox16.TabIndex = 39;
+            this.txtMediaType.Location = new System.Drawing.Point(412, 330);
+            this.txtMediaType.Name = "txtMediaType";
+            this.txtMediaType.Size = new System.Drawing.Size(110, 20);
+            this.txtMediaType.TabIndex = 39;
             // 
             // Sales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 551);
-            this.Controls.Add(this.textBox16);
+            this.Controls.Add(this.txtMediaType);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.textBox15);
+            this.Controls.Add(this.txtJobType);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.textBox14);
+            this.Controls.Add(this.txtNote);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.textBox13);
+            this.Controls.Add(this.txtProdCont);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.txtPayType);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.txtAcctNum);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.txtZip);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txtState);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtCity);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtStreet);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtLastName);
+            this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button5);
@@ -454,8 +454,8 @@
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtOrdDate);
+            this.Controls.Add(this.txtOrdNum);
             this.Controls.Add(this.label1);
             this.Name = "Sales";
             this.Text = "Sales";
@@ -468,8 +468,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtOrdNum;
+        private System.Windows.Forms.TextBox txtOrdDate;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
@@ -480,32 +480,32 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtFirstName;
+        private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtStreet;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtCity;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtState;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtZip;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtAcctNum;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txtPayType;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox txtProdCont;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox txtNote;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox txtJobType;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox txtMediaType;
     }
 }
