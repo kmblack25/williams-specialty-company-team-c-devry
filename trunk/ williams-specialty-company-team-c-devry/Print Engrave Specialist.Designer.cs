@@ -31,18 +31,18 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtOrdDate = new System.Windows.Forms.TextBox();
+            this.txtOrdNum = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.txtMediaType = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.txtJobType = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.txtProdCont = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -81,19 +81,19 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Order Date";
             // 
-            // textBox2
+            // txtOrdDate
             // 
-            this.textBox2.Location = new System.Drawing.Point(336, 25);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(110, 20);
-            this.textBox2.TabIndex = 8;
+            this.txtOrdDate.Location = new System.Drawing.Point(336, 25);
+            this.txtOrdDate.Name = "txtOrdDate";
+            this.txtOrdDate.Size = new System.Drawing.Size(110, 20);
+            this.txtOrdDate.TabIndex = 8;
             // 
-            // textBox1
+            // txtOrdNum
             // 
-            this.textBox1.Location = new System.Drawing.Point(116, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(110, 20);
-            this.textBox1.TabIndex = 7;
+            this.txtOrdNum.Location = new System.Drawing.Point(116, 25);
+            this.txtOrdNum.Name = "txtOrdNum";
+            this.txtOrdNum.Size = new System.Drawing.Size(110, 20);
+            this.txtOrdNum.TabIndex = 7;
             // 
             // label1
             // 
@@ -143,12 +143,12 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox16
+            // txtMediaType
             // 
-            this.textBox16.Location = new System.Drawing.Point(397, 64);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(110, 20);
-            this.textBox16.TabIndex = 45;
+            this.txtMediaType.Location = new System.Drawing.Point(397, 64);
+            this.txtMediaType.Name = "txtMediaType";
+            this.txtMediaType.Size = new System.Drawing.Size(110, 20);
+            this.txtMediaType.TabIndex = 45;
             // 
             // label16
             // 
@@ -159,12 +159,12 @@
             this.label16.TabIndex = 44;
             this.label16.Text = "Media Type";
             // 
-            // textBox15
+            // txtJobType
             // 
-            this.textBox15.Location = new System.Drawing.Point(113, 64);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(110, 20);
-            this.textBox15.TabIndex = 43;
+            this.txtJobType.Location = new System.Drawing.Point(113, 64);
+            this.txtJobType.Name = "txtJobType";
+            this.txtJobType.Size = new System.Drawing.Size(110, 20);
+            this.txtJobType.TabIndex = 43;
             // 
             // label15
             // 
@@ -175,13 +175,13 @@
             this.label15.TabIndex = 42;
             this.label15.Text = "Job Type";
             // 
-            // textBox13
+            // txtProdCont
             // 
-            this.textBox13.Location = new System.Drawing.Point(113, 130);
-            this.textBox13.Multiline = true;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(394, 35);
-            this.textBox13.TabIndex = 41;
+            this.txtProdCont.Location = new System.Drawing.Point(113, 130);
+            this.txtProdCont.Multiline = true;
+            this.txtProdCont.Name = "txtProdCont";
+            this.txtProdCont.Size = new System.Drawing.Size(394, 35);
+            this.txtProdCont.TabIndex = 41;
             // 
             // label13
             // 
@@ -252,11 +252,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(975, 488);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.textBox16);
+            this.Controls.Add(this.txtMediaType);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.textBox15);
+            this.Controls.Add(this.txtJobType);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.textBox13);
+            this.Controls.Add(this.txtProdCont);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -265,8 +265,8 @@
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtOrdDate);
+            this.Controls.Add(this.txtOrdNum);
             this.Controls.Add(this.label1);
             this.Name = "Print_Engrave_Specialist";
             this.Text = "Print_Engrave_Specialist";
@@ -283,18 +283,18 @@
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtOrdDate;
+        private System.Windows.Forms.TextBox txtOrdNum;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox txtMediaType;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox txtJobType;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox txtProdCont;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButton1;
