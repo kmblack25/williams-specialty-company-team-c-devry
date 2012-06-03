@@ -91,13 +91,17 @@ namespace WSC_Business_Automation_test
             
 
             //below see not working. i can login with anything
-            if (Input_Login != null && Input_Password != null )
-                {
-             MessageBox.Show("login was successful");}              
-        
-	   else     {
-	        MessageBox.Show("Login was unsuccessful, Please try again");
-           }
+            if (Input_Login != null && Input_Password != null)
+            {
+                Sales frm = new Sales();
+                frm.ShowDialog();
+            }
+            // MessageBox.Show("login was successful");}              
+
+            else
+            {
+                MessageBox.Show("Login was unsuccessful, Please try again");
+            }
 	   myconc.Close(); }//clsoe connection
         
         private void Login_Load(object sender, EventArgs e)
