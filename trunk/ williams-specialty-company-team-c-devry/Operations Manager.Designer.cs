@@ -87,6 +87,7 @@
             this.txtOrdNum.Name = "txtOrdNum";
             this.txtOrdNum.Size = new System.Drawing.Size(100, 20);
             this.txtOrdNum.TabIndex = 1;
+            this.txtOrdNum.TextChanged += new System.EventHandler(this.txtOrdNum_TextChanged);
             // 
             // checkBox2
             // 
