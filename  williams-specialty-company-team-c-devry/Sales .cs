@@ -66,6 +66,7 @@ namespace WSC_Business_Automation_test
 
         private void button1_Click(object sender, EventArgs e) //new order button 
         {
+           
             //connection string expamle for database--
             string connectionstring = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\WSCDB_V3.accdb;Persist Security Info=True;Jet OLEDB:Database Password=password";
            
@@ -74,7 +75,8 @@ namespace WSC_Business_Automation_test
 
             myconc.Open(); //open connection I am not sure where to put this.
 
-        
+           
+         //string insertstring ="INSERT INTO
         }
 
         private void button2_Click(object sender, EventArgs e) //search button
