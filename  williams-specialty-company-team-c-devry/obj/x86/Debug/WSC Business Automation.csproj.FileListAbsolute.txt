@@ -62,3 +62,16 @@ C:\Users\ravendrake\Documents\Visual Studio 2010\Projects\WSC Business Automatio
 C:\Users\ravendrake\Documents\Visual Studio 2010\Projects\WSC Business Automation(21)\ williams-specialty-company-team-c-devry\obj\x86\Debug\WSC_Business_Automation_test.Properties.Resources.resources
 C:\Users\ravendrake\Documents\Visual Studio 2010\Projects\WSC Business Automation(21)\ williams-specialty-company-team-c-devry\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\ravendrake\Documents\Visual Studio 2010\Projects\WSC Business Automation(21)\ williams-specialty-company-team-c-devry\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\ravendrake\Documents\Visual Studio 2010\Projects\WSC Business Automation(47)\ williams-specialty-company-team-c-devry\obj\x86\Debug\WSC Business Automation test.exe
+C:\Users\ravendrake\Documents\Visual Studio 2010\Projects\WSC Business Automation(47)\ williams-specialty-company-team-c-devry\obj\x86\Debug\WSC Business Automation test.pdb
+C:\Users\ravendrake\Documents\Visual Studio 2010\Projects\WSC Business Automation(47)\ williams-specialty-company-team-c-devry\bin\Debug\WSCDB_V3.accdb
+C:\Users\ravendrake\Documents\Visual Studio 2010\Projects\WSC Business Automation(47)\ williams-specialty-company-team-c-devry\bin\Debug\WSC Business Automation test.exe
+C:\Users\ravendrake\Documents\Visual Studio 2010\Projects\WSC Business Automation(47)\ williams-specialty-company-team-c-devry\bin\Debug\WSC Business Automation test.pdb
+C:\Users\ravendrake\Documents\Visual Studio 2010\Projects\WSC Business Automation(47)\ williams-specialty-company-team-c-devry\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\ravendrake\Documents\Visual Studio 2010\Projects\WSC Business Automation(47)\ williams-specialty-company-team-c-devry\obj\x86\Debug\WSC_Business_Automation_test.Operations_Manager.resources
+C:\Users\ravendrake\Documents\Visual Studio 2010\Projects\WSC Business Automation(47)\ williams-specialty-company-team-c-devry\obj\x86\Debug\WSC_Business_Automation_test.Print_Engrave_Specialist.resources
+C:\Users\ravendrake\Documents\Visual Studio 2010\Projects\WSC Business Automation(47)\ williams-specialty-company-team-c-devry\obj\x86\Debug\WSC_Business_Automation_test.Sales.resources
+C:\Users\ravendrake\Documents\Visual Studio 2010\Projects\WSC Business Automation(47)\ williams-specialty-company-team-c-devry\obj\x86\Debug\WSC_Business_Automation_test.Login.resources
+C:\Users\ravendrake\Documents\Visual Studio 2010\Projects\WSC Business Automation(47)\ williams-specialty-company-team-c-devry\obj\x86\Debug\WSC_Business_Automation_test.Properties.Resources.resources
+C:\Users\ravendrake\Documents\Visual Studio 2010\Projects\WSC Business Automation(47)\ williams-specialty-company-team-c-devry\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\ravendrake\Documents\Visual Studio 2010\Projects\WSC Business Automation(47)\ williams-specialty-company-team-c-devry\obj\x86\Debug\GenerateResource.write.1.tlog
