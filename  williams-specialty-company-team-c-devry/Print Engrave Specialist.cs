@@ -62,6 +62,12 @@ namespace WSC_Business_Automation_test
         {
             //connection string expamle for database--
             string connectionstring = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\WSCDB_V3.accdb;Persist Security Info=True;Jet OLEDB:Database Password=password";
+            OleDbConnection myconc = new OleDbConnection(connectionstring);
+
+
+            myconc.Open(); //open connection I am not sure where to put this.
+
+        
         }
 
         private void button3_Click(object sender, EventArgs e) //update button
