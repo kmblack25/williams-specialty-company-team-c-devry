@@ -49,14 +49,14 @@ namespace WSC_Business_Automation_test
 
             int status = 0;
             int record;
-          //connection string expamle for database--
-        string connectionstring = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\WSCDB_V3.accdb;Persist Security Info=True;Jet OLEDB:Database Password=password";
-         
+            //connection string expamle for database--
+            string connectionstring = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\WSCDB_V3.accdb;Persist Security Info=True;Jet OLEDB:Database Password=password";
+
             OleDbConnection myconc = new OleDbConnection(connectionstring);//connection string for order number
-          string selectstring = "Select Order_Number FROM Order"; //slect string to see if there is a order number 
+            string selectstring = "Select Order_Number FROM Order"; //slect string to see if there is a order number 
             myconc.Open(); //open connection I am not sure where to put this.
             OleDbCommand cmd = new OleDbCommand(selectstring, myconc); //new database command to send my string
-            OleDbDataReader myReader = new OleDbDataReader(); //create new data reader
+            OleDbDataReader myReader; 
             myReader = cmd.ExecuteReader(); //execute reader
 
             while (myReader.Read() == true)
@@ -64,11 +64,25 @@ namespace WSC_Business_Automation_test
                 record = (int)myReader[0];
                 txtOrdDate.Text.ToString();
                 txtFirstName.Text.ToString();
+                txtStreet.Text.ToString();
+                txtState.Text.ToString();
+                txtZip.Text.ToString();
+                txtPhone.Text.ToString();
+                txtEmail.Text.ToString();
+                status = (int)myReader[7];
+                if (status == 1)
+                    txtOrdDate.Text.Equals(0);
+                MessageBox.Show("no record exists ");
+
+                //else 
+                //MessageBox.Show("record exists");
+                myReader.Close();
+
             }
-            
-        } 
-        
-        
+
+        }
+
+
         private void button3_Click(object sender, EventArgs e) //update button
         {
             //connection string expamle for database--
@@ -82,3 +96,4 @@ namespace WSC_Business_Automation_test
         }
     }
 }
+
