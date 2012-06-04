@@ -71,36 +71,43 @@ namespace WSC_Business_Automation_test
             string Input_Login = Employee_login.Text;  //variable to parse text entered into Login textbox
             string Input_Password = Password.Text; //variable to parse text entered into Password textbox
 
+
+            //I think that it would be easier to check the username and password against the USERID and UserPass variables once 
+            //and then do a nested if statement to check the department. Even though we will be changing it. This should work.
+            //your if statement to validate login. 
+
             //if-else stsements tp launch differnt interfaces
-            if (UserID == Input_Login && UserPass == Input_Password)  // need to add department check
+            if (UserID == Input_Login || USERID1 == Input_Login || USERID2 == Input_Login && UserPass == Input_Password)  // this will accept all departments
             {
-                Sales frm = new Sales();
-                frm.ShowDialog();
-            }
-            else
-                if (USERID1 == Input_Login && UserPass == Input_Password) // need to add department check
+                MessageBox.Show("Login was successful!");
+                if (Input_Login == UserID) //this will open Sales form if sales was typed in for username
+                {
+                    Sales frm = new Sales();
+                    frm.ShowDialog();
+                }
+                else if (Input_Login == USERID1)
                 {
                     Operations_Manager frm = new Operations_Manager();
                     frm.ShowDialog();
                 }
+                else if (Input_Login == USERID2)
+                {
+                    Print_Engrave_Specialist frm = new Print_Engrave_Specialist();
+                    frm.ShowDialog();
+                }
                 else
-                    if (USERID2 == Input_Login && UserPass == Input_Password) // need to add department check
-                    {
-                        Print_Engrave_Specialist frm = new Print_Engrave_Specialist();
-                        frm.ShowDialog();
-                    }
-                    else
+                {
+                    MessageBox.Show("No Department was specified");//can't happen because it wouldn't log them in
+                }
 
-                        //if login or password is incorrect then messabox show error. When click button. clear textboxs for
-                        //newe login attempt
-                        if (UserID != Input_Login || UserPass != Input_Password)  // needs to fleshed out do to needing deptparment check
-                        {
-                            MessageBox.Show("incorrect login or password. Please Try again", "Input Error");
-                            Employee_login.Clear();
-                            Password.Clear();
-                            return;
-                        }
-
+            }
+            else //if login credentials fail it jumps here and won't log in.
+            {
+                MessageBox.Show("incorrect login or password. Please Try again", "Input Error");
+                Employee_login.Clear();
+                Password.Clear();
+                return;
+            }
         }
 
         private void Login_Load(object sender, EventArgs e)
