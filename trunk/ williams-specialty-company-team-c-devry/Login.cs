@@ -89,6 +89,7 @@ namespace WSC_Business_Automation_test
                 {
                     Operations_Manager frm = new Operations_Manager();
                     frm.ShowDialog();
+                    
                 }
                 else if (Input_Login == USERID2)
                 {
