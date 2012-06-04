@@ -54,7 +54,7 @@ namespace WSC_Business_Automation_test
             string connectionstring = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\WSCDB_V3.accdb;Persist Security Info=True;Jet OLEDB:Database Password=password";
            
             OleDbConnection myconc = new OleDbConnection(connectionstring);//connection string for order number
-            string selectstring = "Select Order_Number, Order_Date, Order_Status, Order_Quantity, [Order]";  
+            string selectstring = "Select * FROM [Order]";  
             myconc.Open(); //open connection I am not sure where to put this.
             OleDbCommand cmd = new OleDbCommand(selectstring, myconc); //new database command to send my string
             OleDbDataReader myReader; 
