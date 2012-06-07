@@ -53,6 +53,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -64,6 +65,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee.Designer.cs">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeInfo.cs" />
+    <Compile Include="New Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="New Order.Designer.cs">
+      <DependentUpon>New Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment.Designer.cs">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </Compile>
     <Compile Include="WSCDB_V3DataSet.cs">
       <DependentUpon>WSCDB_V3DataSet.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -73,8 +93,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>WSCDB_V3DataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Employee.resx">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New Order.resx">
+      <DependentUpon>New Order.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Operations Manager.resx">
       <DependentUpon>Operations Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Print Engrave Specialist.resx">
       <DependentUpon>Print Engrave Specialist.cs</DependentUpon>
@@ -120,6 +149,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
