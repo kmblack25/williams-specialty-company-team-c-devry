@@ -17,8 +17,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using System.Configuration;
-using System.Data.OleDb; //needed for access
+
 namespace WSC_Business_Automation_test
 {
     public partial class Print_Engrave_Specialist : Form
@@ -62,18 +61,17 @@ namespace WSC_Business_Automation_test
         {
             //connection string expamle for database--
             string connectionstring = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\WSCDB_V3.accdb;Persist Security Info=True;Jet OLEDB:Database Password=password";
-            OleDbConnection myconc = new OleDbConnection(connectionstring);
-
-
-            myconc.Open(); //open connection I am not sure where to put this.
-
-        
         }
 
         private void button3_Click(object sender, EventArgs e) //update button
         {
             //connection string expamle for database--
             string connectionstring = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\WSCDB_V3.accdb;Persist Security Info=True;Jet OLEDB:Database Password=password";
+        }
+
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

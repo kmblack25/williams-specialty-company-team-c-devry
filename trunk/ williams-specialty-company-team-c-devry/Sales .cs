@@ -18,7 +18,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Configuration;
-using System.Data.OleDb; //needed for access
+using System.Data.OleDb;
 
 namespace WSC_Business_Automation_test
 {
@@ -66,34 +66,63 @@ namespace WSC_Business_Automation_test
 
         private void button1_Click(object sender, EventArgs e) //new order button 
         {
-           
-            //connection string expamle for database--
-            string connectionstring = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\WSCDB_V3.accdb;Persist Security Info=True;Jet OLEDB:Database Password=password";
-           
-            OleDbConnection myconc = new OleDbConnection(connectionstring);
-
-
-            myconc.Open(); //open connection I am not sure where to put this.
-
-           
-         //string insertstring ="INSERT INTO
+            
         }
 
         private void button2_Click(object sender, EventArgs e) //search button
         {
-            //connection string expamle for database--
-            string connectionstring = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\WSCDB_V3.accdb;Persist Security Info=True;Jet OLEDB:Database Password=password";
+            
         }
 
         private void button3_Click(object sender, EventArgs e) //update button
         {
-            //connection string expamle for database--
-            string connectionstring = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\WSCDB_V3.accdb;Persist Security Info=True;Jet OLEDB:Database Password=password";
+            Boolean isInsert = false;
+            if (textOrderNumber.Text != "")
+            {
+                isInsert = true;
+            }
+
+            String sql = "";
+
+            if (isInsert)
+            {
+                Int32 orderNumber = getNextOrderNumber();
+                sql += "Insert into Order(Order_Number, Order_Type, Order_Description, Order_Eng_Print, Order_Date," +
+                       "                  Order_Status, Order_Quantity, Customer_ID, Employee_ID, Employee_ID_2, Cost_ID, Expected_Delivery_date,"+
+                       "                  Ordered_Print, Ordered_Picture, Payment_Status, Payment_Type, Order_Total, Total_Payments_Received)" +
+                       "          Values (" + orderNumber + ",1,'descr',1," + DateTime.Now + ",)" + 
+                       "                  1, 1, ";
+            }
+
+
+
+            
         }
 
-        private void txtZip_TextChanged(object sender, EventArgs e)
+        public static Int32 getNextOrderNumber()
         {
+            string sql = "SELECT MAX(Order_Number) AS Expr1 FROM [Order]";
 
+            //open connection
+            ConnectionStringSettings connection = ConfigurationManager.ConnectionStrings["WSCDB_V3ConnectionString"];
+            OleDbConnection myconc = new OleDbConnection(connection.ConnectionString);
+            myconc.Open();
+
+            //Execute Query and get dataset
+            OleDbCommand cmd = new OleDbCommand(sql, myconc); //new database command to send my string
+            OleDbDataAdapter adapter = new OleDbDataAdapter(cmd); //new adapter for data
+            DataSet ds = new DataSet(); // newdataset
+            adapter.Fill(ds); //fill the data set
+
+
+            if (ds.Tables[0].Rows[0][0].ToString() != "")
+            {
+                return Int32.Parse(ds.Tables[0].Rows[0][0].ToString()) + 1;
+            }
+            else
+            {
+                return 1;
+            }
         }
     }
 }

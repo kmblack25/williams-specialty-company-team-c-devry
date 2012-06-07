@@ -3,7 +3,7 @@
  * File: Login.cs
  * By: Team C    
  * 
- * Loign.cs captures login/paasword and checks against database if correct launches
+ * Loign.cs captures login/pasword and checks against database if correct launches
  * correct interface else throws error
  * 
  */
@@ -17,6 +17,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Configuration;
 using System.Data.OleDb; //needed for access
 
 namespace WSC_Business_Automation_test
@@ -45,12 +46,6 @@ namespace WSC_Business_Automation_test
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-
-            //connection string expamle for database--
-            //string ConnStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\abc.mdb;Jet OLEDB:Database Password=password";
-
-
             /***************************************************************************************
             * Lanuch code for checking login and password.
             * 
@@ -60,61 +55,51 @@ namespace WSC_Business_Automation_test
             * 
             * ***************************************************************************************/
 
-            string UserID = "sales"; //User ID  is string variable so we can check login--need to remove hardcode login
-            string UserPass = "password"; //UserPass is string varaiable for checking password-- needw to remove hardcoded password
-
-            //start temp variables for login check
-            string USERID1 = "ops";
-            string USERID2 = "print";
-            //End temp variables for login check--remove when no longer needed 
-
-            string Input_Login = Employee_login.Text;  //variable to parse text entered into Login textbox
+            //Read form values
+            string Input_Login = Employee_ID.Text;  //variable to parse text entered into Login textbox
             string Input_Password = Password.Text; //variable to parse text entered into Password textbox
 
+            //Select Sql
+            string selectstring = "SELECT Employee_ID, User_ID, Emp_Password, Employee_Type FROM Employee WHERE user_Id='" + Input_Login + "' AND  emp_password='" + Input_Password + "'";
 
-            //I think that it would be easier to check the username and password against the USERID and UserPass variables once 
-            //and then do a nested if statement to check the department. Even though we will be changing it. This should work.
-            //your if statement to validate login. 
+            //open connection
+            ConnectionStringSettings connection = ConfigurationManager.ConnectionStrings["WSCDB_V3ConnectionString"];
+            OleDbConnection myconc = new OleDbConnection(connection.ConnectionString);
+            myconc.Open();
+            
+            //Execute Query and get dataset
+            OleDbCommand cmd = new OleDbCommand(selectstring, myconc); //new database command to send my string
+            OleDbDataAdapter adapter = new OleDbDataAdapter(cmd); //new adapter for data
+            DataSet ds = new DataSet(); // newdataset
+            adapter.Fill(ds); //fill the data set
 
-            //if-else stsements tp launch differnt interfaces
-            if (UserID == Input_Login || USERID1 == Input_Login || USERID2 == Input_Login && UserPass == Input_Password)  // this will accept all departments
+            //If Number of rows returned is not 0 then login is successful
+            if (ds.Tables[0].Rows.Count!=0)
             {
-                MessageBox.Show("Login was successful!");
-                if (Input_Login == UserID) //this will open Sales form if sales was typed in for username
-                {
-                    Sales frm = new Sales();
-                    frm.ShowDialog();
-                }
-                else if (Input_Login == USERID1)
-                {
-                    Operations_Manager frm = new Operations_Manager();
-                    frm.ShowDialog();
-                    
-                }
-                else if (Input_Login == USERID2)
-                {
-                    Print_Engrave_Specialist frm = new Print_Engrave_Specialist();
-                    frm.ShowDialog();
-                }
-                else
-                {
-                    MessageBox.Show("No Department was specified");//can't happen because it wouldn't log them in
-                }
-
+                //message to user
+                MessageBox.Show("Login was successful");
+                
+                //Populate logged in employee info
+                EmployeeInfo.employeeId = ds.Tables[0].Rows[0]["Employee_ID"].ToString();
+                EmployeeInfo.userId = ds.Tables[0].Rows[0]["User_ID"].ToString();
+                EmployeeInfo.employeeType = ds.Tables[0].Rows[0]["Employee_Type"].ToString();
+                
+                //close this dialog with success
+                this.DialogResult = DialogResult.OK;
+                this.Close();
             }
-            else //if login credentials fail it jumps here and won't log in.
+            else
             {
-                MessageBox.Show("incorrect login or password. Please Try again", "Input Error");
-                Employee_login.Clear();
-                Password.Clear();
-                return;
+                MessageBox.Show("Login was unsuccessful, Please try again");
             }
+
+            //close connection
+            myconc.Close();
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
 
         }
-
     }
 }
