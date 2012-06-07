@@ -29,7 +29,7 @@ namespace WSC_Business_Automation_test
             Application.Run(new Employee());
             Application.Exit();
 
-            /*Login f1 = new Login();
+           Login f1 = new Login();
             DialogResult dr = f1.ShowDialog();
             if (dr == DialogResult.OK)
             {
@@ -49,7 +49,7 @@ namespace WSC_Business_Automation_test
             else
             {
                 Application.Exit();
-            }*/
+            }
             //Application.Run(new Login());
         }
     }
