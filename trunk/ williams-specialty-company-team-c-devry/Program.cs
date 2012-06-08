@@ -26,8 +26,8 @@ namespace WSC_Business_Automation_test
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new Employee());
-            Application.Exit();
+            /*Application.Run(new Employee());
+            Application.Exit();*/
 
            Login f1 = new Login();
             DialogResult dr = f1.ShowDialog();
